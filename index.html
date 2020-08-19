@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <title>Tienda de vegetales</title>
+</head>
+<body>
+    <header class="row" id="cabecera">
+        <div class="col-md-12 jumbotron jumbotron-fluid presentacion">
+            <div class="container">
+              <h1 class="display-3">Bienvenidos a Vegania</h1>
+              <p class="lead">Ofrecemos variedad de vegetales organicos</p>
+            </div>
+          </div>
+    </header>
+
+   
+    <section  class="row" id="listas">
+        <div class="col-md-6" id="tabla1">
+            <h2 class="text-center mb-3">Lista de productos</h2>
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Precio por unidad</th>
+                            <th scope="col">Cantidad a comprar</th>
+                            <th scope="col">Comprar</th>
+                        </tr>                
+                    </thead>
+                    <tbody>
+                        <!-- Aca se crea la tabla dinamica -->
+                    </tbody>
+                </table>
+        </div>
+        <div class="col-md-6" id="tabla2">
+            <h2 class="text-center mb-3">Su compra</h2>
+                <table class="table table-hover tablaCompra">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio por unidad</th>
+                            <th scope="col">Precio total</th>
+                            <th scope="col">Borrar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCompra">
+                        <!-- Aca se crea la tabla dinamica de productos comprados -->
+                    </tbody>
+                </table> 
+        </div>
+    </section>
+    <section class="finalizar">
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6 text-light text-center">
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#totalCompra" onclick="totalCompra()">Calcular Total de compra!</a>
+            </div>
+        </div>
+        <div class="modal" id="totalCompra" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Total de la compra</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h3 class="text-center pt-5" id="inserteTotal"></h3>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Pagar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="gracias">
+        <div class="col-md-8"></div>
+        <div class="col-md-4"></div>
+    </section>
+
+    <footer>
+    </footer>
+
+
+    <script src="/javascript/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
